@@ -1,0 +1,35 @@
+
+
+<div class="container-fluid " style="padding-top: 70px;width: 70%; margin-right: 100px;">
+  <h1>Ethical Hacking</h1>
+  <table class="table ">
+    <thead class="bg-dark">
+      <tr class="text-white">
+        <th scope="col" >#</th>
+        <th scope="col" >Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Grade</th>
+        <th scope="col">Fees</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of ethical_users;">
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.email}}</td>
+        <td>{{e.password}}</td>
+        <td>{{e.gender}}</td>
+        <td>{{e.grade}}</td>
+        <td>{{e.fees | uppercase}}</td>
+        <td><button class="btn btn-secondary" (click)="deleteEthical(e)">Delete</button></td>
+        <td><a href="editE/{{e.id}}" class="btn btn-warning btn2">EDIT</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

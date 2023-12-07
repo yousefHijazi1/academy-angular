@@ -1,0 +1,32 @@
+
+<div class="container-fluid " style="padding-top: 70px;width: 70%; margin-right: 100px;">
+  <h1>Web Development</h1>
+  <table class="table ">
+    <thead class="bg-dark">
+      <tr class="text-white">
+        <th scope="col" >#</th>
+        <th scope="col" >Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Grade</th>
+        <th scope="col">Fees</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let w of web_users;">
+        <td>{{w.id}}</td>
+        <td>{{w.name}}</td>
+        <td>{{w.email}}</td>
+        <td>{{w.password}}</td>
+        <td>{{w.gender}}</td>
+        <td>{{w.grade}}</td>
+        <td>{{w.fees | uppercase}}</td>
+        <td><button class="btn btn-secondary" (click)="deleteWeb(w)">Delete</button></td>
+        <td><a href="editw/{{w.id}}" class="btn btn-warning btn2">EDIT</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

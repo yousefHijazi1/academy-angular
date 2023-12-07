@@ -1,0 +1,59 @@
+
+
+
+<div class="container w-50 text-align-center mt-5">
+
+  <form [formGroup]="addForm" novalidate style="width: 70%;margin-left: 185px;">
+
+    <div class="text-center"><h1 style="display: inline-block;">Add a New Student</h1>
+      <h4  style="display: inline-block;margin-left: 5px;">(Ethical Hacking)</h4></div>
+
+    <hr>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" formControlName="name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" formControlName="email">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="text" class="form-control" name="password" formControlName="password">
+    </div>
+
+
+<div class="row">
+  <div class="col-6">
+    <h3>Fees</h3>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineRadio1" name="fees" formControlName="fees"  value="Paid">
+      <label class="form-check-label" for="inlineRadio1">Paid</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineRadio2" name="fees" formControlName="fees"  value="Non-Paid">
+      <label class="form-check-label" for="inlineRadio2">Non-Paid</label>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <h3>Gender</h3>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineRadio3" name="gender" formControlName="gender"  value="male">
+      <label class="form-check-label" for="inlineRadio3">Male</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineRadio4" name="gender" formControlName="gender"  value="female">
+      <label class="form-check-label" for="inlineRadio4">Female</label>
+    </div>
+  </div>
+</div>
+
+    <br><br>
+
+    <button type="submit" class="btn btn-warning" (click)="onSubmit()">Add Contact</button>
+  </form>
+</div>

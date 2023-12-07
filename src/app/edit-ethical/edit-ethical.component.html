@@ -1,0 +1,39 @@
+
+<div class="container" style="margin-top: 70px;">
+  <div class="text-center"><h1>Edit Contact</h1></div>
+  <div style="width:50%;margin:0 auto">
+    <form [formGroup]="addForm" novalidate class="form">
+      <input type="hidden" name="id" formControlName="id">
+      <div class="row mt-3">
+        <div class="col-md-6">Name</div>
+        <div class="col-md-6"><input type="text" class="form-control" name="name" formControlName="name"></div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">Email</div>
+        <div class="col-md-6"><input type="text" class="form-control" name="email" formControlName="email"></div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">Password</div>
+        <div class="col-md-6"><input type="text" class="form-control" name="password" formControlName="password"></div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">Grade</div>
+        <div class="col-md-6"><input type="text" class="form-control" name="grade" formControlName="grade"></div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">Fees</div>
+        <div class="col-md-6"><input type="text" class="form-control" name="fees" formControlName="fees"></div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <button class="btn btn-success"   (click)="onEdit()">EDIT CONTACT</button>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>
